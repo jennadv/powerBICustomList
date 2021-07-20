@@ -1,0 +1,48 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Display Labels",
+            "name": "category",
+            "kind": "Grouping",
+            "description": "Category"
+            }],
+
+    "objects": {
+        "rect": {
+            "displayName": "Labels",
+            "properties": {
+                "rectColor": {
+                    "displayName": "Color",
+                    "description": "The fill color of the label card.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "rectThickness": {
+                    "displayName": "Border Thickness",
+                    "description": "The border thickness.",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        }
+    },
+
+    "dataViewMappings": [
+          {
+            "conditions": [
+                { "category": { "max": 1 } }
+              ],
+            "categorical": {
+                  "categories": {
+                    "bind": {"to": "category"} }
+                }
+              }
+        ]
+
+}
